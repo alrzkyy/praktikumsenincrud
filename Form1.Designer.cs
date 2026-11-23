@@ -36,11 +36,11 @@
             Satuan = new DataGridViewTextBoxColumn();
             HargaSatuan = new DataGridViewTextBoxColumn();
             BatasMinimum = new DataGridViewTextBoxColumn();
-            textBox2 = new TextBox();
+            textSatuan = new TextBox();
             textNamaBahan = new TextBox();
             textKode = new TextBox();
-            comboBox1 = new ComboBox();
-            numericUpDown1 = new NumericUpDown();
+            cmbKategori = new ComboBox();
+            numericStok = new NumericUpDown();
             label1 = new Label();
             label2 = new Label();
             label3 = new Label();
@@ -48,15 +48,15 @@
             label5 = new Label();
             label6 = new Label();
             label7 = new Label();
-            numericUpDown2 = new NumericUpDown();
-            numericUpDown3 = new NumericUpDown();
+            numericHarsatuan = new NumericUpDown();
+            numericBatasMin = new NumericUpDown();
             button1 = new Button();
             button2 = new Button();
             button3 = new Button();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericStok).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericHarsatuan).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)numericBatasMin).BeginInit();
             SuspendLayout();
             // 
             // dataGridView1
@@ -115,12 +115,12 @@
             BatasMinimum.Name = "BatasMinimum";
             BatasMinimum.ReadOnly = true;
             // 
-            // textBox2
+            // textSatuan
             // 
-            textBox2.Location = new Point(30, 279);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(150, 23);
-            textBox2.TabIndex = 0;
+            textSatuan.Location = new Point(30, 279);
+            textSatuan.Name = "textSatuan";
+            textSatuan.Size = new Size(150, 23);
+            textSatuan.TabIndex = 0;
             // 
             // textNamaBahan
             // 
@@ -137,20 +137,20 @@
             textKode.TabIndex = 0;
             textKode.TextChanged += textBox4_TextChanged;
             // 
-            // comboBox1
+            // cmbKategori
             // 
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(30, 158);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(150, 23);
-            comboBox1.TabIndex = 2;
+            cmbKategori.FormattingEnabled = true;
+            cmbKategori.Location = new Point(30, 158);
+            cmbKategori.Name = "cmbKategori";
+            cmbKategori.Size = new Size(150, 23);
+            cmbKategori.TabIndex = 2;
             // 
-            // numericUpDown1
+            // numericStok
             // 
-            numericUpDown1.Location = new Point(30, 217);
-            numericUpDown1.Name = "numericUpDown1";
-            numericUpDown1.Size = new Size(150, 23);
-            numericUpDown1.TabIndex = 3;
+            numericStok.Location = new Point(30, 217);
+            numericStok.Name = "numericStok";
+            numericStok.Size = new Size(150, 23);
+            numericStok.TabIndex = 3;
             // 
             // label1
             // 
@@ -223,19 +223,19 @@
             label7.TabIndex = 4;
             label7.Text = "BATAS MIN :";
             // 
-            // numericUpDown2
+            // numericHarsatuan
             // 
-            numericUpDown2.Location = new Point(30, 352);
-            numericUpDown2.Name = "numericUpDown2";
-            numericUpDown2.Size = new Size(150, 23);
-            numericUpDown2.TabIndex = 3;
+            numericHarsatuan.Location = new Point(30, 352);
+            numericHarsatuan.Name = "numericHarsatuan";
+            numericHarsatuan.Size = new Size(150, 23);
+            numericHarsatuan.TabIndex = 3;
             // 
-            // numericUpDown3
+            // numericBatasMin
             // 
-            numericUpDown3.Location = new Point(33, 417);
-            numericUpDown3.Name = "numericUpDown3";
-            numericUpDown3.Size = new Size(150, 23);
-            numericUpDown3.TabIndex = 3;
+            numericBatasMin.Location = new Point(33, 417);
+            numericBatasMin.Name = "numericBatasMin";
+            numericBatasMin.Size = new Size(150, 23);
+            numericBatasMin.TabIndex = 3;
             // 
             // button1
             // 
@@ -246,6 +246,7 @@
             button1.TabIndex = 5;
             button1.Text = "TAMBAH";
             button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
             // 
             // button2
             // 
@@ -282,32 +283,32 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
-            Controls.Add(numericUpDown3);
-            Controls.Add(numericUpDown2);
-            Controls.Add(numericUpDown1);
-            Controls.Add(comboBox1);
+            Controls.Add(numericBatasMin);
+            Controls.Add(numericHarsatuan);
+            Controls.Add(numericStok);
+            Controls.Add(cmbKategori);
             Controls.Add(dataGridView1);
             Controls.Add(textKode);
-            Controls.Add(textBox2);
+            Controls.Add(textSatuan);
             Controls.Add(textNamaBahan);
             Name = "Form1";
             Text = "Form1";
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericStok).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericHarsatuan).EndInit();
+            ((System.ComponentModel.ISupportInitialize)numericBatasMin).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
         private DataGridView dataGridView1;
-        private TextBox textBox2;
+        private TextBox textSatuan;
         private TextBox textNamaBahan;
         private TextBox textKode;
-        private ComboBox comboBox1;
-        private NumericUpDown numericUpDown1;
+        private ComboBox cmbKategori;
+        private NumericUpDown numericStok;
         private Label label1;
         private Label label2;
         private Label label3;
@@ -315,8 +316,8 @@
         private Label label5;
         private Label label6;
         private Label label7;
-        private NumericUpDown numericUpDown2;
-        private NumericUpDown numericUpDown3;
+        private NumericUpDown numericHarsatuan;
+        private NumericUpDown numericBatasMin;
         private Button button1;
         private Button button2;
         private Button button3;
